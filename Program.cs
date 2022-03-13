@@ -154,17 +154,22 @@ namespace Ignorance_is_Blissful
             Console.Clear();
 
             DateTime currentDateTime = DateTime.Now;
-            DateTime upcomingDateTime = DateTime.Now.AddDays(10);
+            DateTime upcomingDateTime = DateTime.Now.AddDays(3);
             Console.WriteLine("In the top corner of the grocery list you see the date.");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(currentDateTime);
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("In the right hand corner of the grocery list, you see a different date.");
+            Console.WriteLine("You ask your mom why there's two dates on her phone.");
+            Console.WriteLine("\nShe smiles at you fondly and informs you that your birthday is in three days. Don't you remember silly?");
+            Console.WriteLine("\n...Strangely enough you don't remember...");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(upcomingDateTime);
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.ReadKey();
             Console.Clear();
+
+
         }
     }
 }
