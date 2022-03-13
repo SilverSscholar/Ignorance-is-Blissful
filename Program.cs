@@ -169,7 +169,11 @@ namespace Ignorance_is_Blissful
             Console.ReadKey();
             Console.Clear();
 
+            Console.WriteLine("Your mother, smiles and tells you that you can use the notepad app on her phone to look at the grocery list.\n She opens it for you" +
+                " before she takes a cart and leaves you in the aisle's by yourself.");
 
+        }
+       
         }
     }
 }
