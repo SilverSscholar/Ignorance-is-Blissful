@@ -15,12 +15,13 @@ namespace Ignorance_is_Blissful
         //introduce a combat class
         //introduce a player class
         //call dialogue from a .txt file 
-
+        public static Player currentPlayer = new Player();
         static void Main(string[] args)
         {
             IntroScreen();
             DialogueOne();
             GatheringThePlayersName();
+            SceneOne();
         }
         //starting scene
         static public void IntroScreen()
@@ -43,11 +44,40 @@ namespace Ignorance_is_Blissful
              {
                  Console.WriteLine(line);
              }
-             Console.ReadLine();
+ 
+           
+        }
+        static public void GatheringThePlayersName()
+        {
+            currentPlayer.name = Console.ReadLine();
+            Console.WriteLine("Is "+ currentPlayer.name+ " correct? (Y)es/(N)o?");
+            string PlayersNameCorrect = Console.ReadLine();
+            if(PlayersNameCorrect.ToLower()== "yes" || PlayersNameCorrect.ToLower()=="y")
+            {
+                Console.WriteLine("It's very nice to meet you " + currentPlayer.name + " please enjoy your stay.");
+                Console.ReadKey();
+            }
+            else if (PlayersNameCorrect.ToLower() == "no" || PlayersNameCorrect.ToLower() == "n")
+            {
+                Console.WriteLine(currentPlayer.name + " is incorrect? Please think hard on your name, this is your last opportunity to change it.");
+                currentPlayer.name = Console.ReadLine();
+                Console.WriteLine(currentPlayer.name + " is your name now. Please enjoy your stay!");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("I'm sorry I don't recongnize that input. Please try again.");
+                Console.ReadKey();
+                Console.Clear();
+                DialogueOne();
+                GatheringThePlayersName();
+                
+            }
+
             Console.ReadKey();
             Console.Clear();
         }
-        static public void GatheringThePlayersName()
+        static public void SceneOne()
         {
 
         }
