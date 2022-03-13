@@ -52,7 +52,7 @@ namespace Ignorance_is_Blissful
             currentPlayer.name = Console.ReadLine();
             Console.WriteLine("Is "+ currentPlayer.name+ " correct? (Y)es/(N)o?");
             string PlayersNameCorrect = Console.ReadLine();
-            if(PlayersNameCorrect.ToLower()== "yes" || PlayersNameCorrect.ToLower()=="y")
+            if (PlayersNameCorrect.ToLower() == "yes" || PlayersNameCorrect.ToLower() == "y")
             {
                 Console.WriteLine("It's very nice to meet you " + currentPlayer.name + " please enjoy your stay.");
                 Console.ReadKey();
@@ -64,6 +64,14 @@ namespace Ignorance_is_Blissful
                 Console.WriteLine(currentPlayer.name + " is your name now. Please enjoy your stay!");
                 Console.ReadKey();
             }
+            else if (PlayersNameCorrect == "") 
+            {
+                Console.WriteLine("___ is not a valid name, please try again.");
+                Console.ReadKey();
+                Console.Clear();
+                DialogueOne();
+                GatheringThePlayersName();
+            }
             else
             {
                 Console.WriteLine("I'm sorry I don't recongnize that input. Please try again.");
@@ -71,7 +79,7 @@ namespace Ignorance_is_Blissful
                 Console.Clear();
                 DialogueOne();
                 GatheringThePlayersName();
-                
+
             }
 
             Console.ReadKey();
@@ -88,6 +96,8 @@ namespace Ignorance_is_Blissful
             {
                 Console.WriteLine(line);
             }
+            Console.WriteLine("Ah " + currentPlayer.name + " are you finally awake sweetheart? You were out like a light!\nDid you get any sleep at your father's?");
+
             Console.ReadKey();
             Console.Clear();
         }
