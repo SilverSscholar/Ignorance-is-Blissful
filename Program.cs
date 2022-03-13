@@ -9,12 +9,14 @@ namespace Ignorance_is_Blissful
 {
     class Program
     {
+        //set command prompt window size
         //ask for players name
         //allow players name to be recalled through text
         //introduce player to the storyline
         //introduce a combat class
         //introduce a player class
         //call dialogue from a .txt file 
+        
         public static Player currentPlayer = new Player();
         static void Main(string[] args)
         {
@@ -22,6 +24,7 @@ namespace Ignorance_is_Blissful
             DialogueOne();
             GatheringThePlayersName();
             SceneOne();
+            EnteringTheGrocer();
         }
         //starting scene
         static public void IntroScreen()
@@ -38,33 +41,33 @@ namespace Ignorance_is_Blissful
             string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\DialogueOneWhatIsYourName.txt";
 
             //string[] lines = File.ReadAllLines(filePath);
-             List<string> lines = new List<string>();
-             lines = File.ReadAllLines(filePath).ToList();
-             foreach (String line in lines)
-             {
-                 Console.WriteLine(line);
-             }
- 
-           
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach (String line in lines)
+            {
+                Console.WriteLine(line);
+            }
+
+
         }
         static public void GatheringThePlayersName()
         {
             currentPlayer.name = Console.ReadLine();
-            Console.WriteLine("Is "+ currentPlayer.name+ " correct? (Y)es/(N)o?");
+            Console.WriteLine("Is " + currentPlayer.name + " correct? (Y)es/(N)o?");
             string PlayersNameCorrect = Console.ReadLine();
             if (PlayersNameCorrect.ToLower() == "yes" || PlayersNameCorrect.ToLower() == "y")
             {
-                Console.WriteLine("It's very nice to meet you " + currentPlayer.name + " please enjoy your stay.");
+                Console.WriteLine("It's very nice to meet you " + currentPlayer.name + " remember your values.");
                 Console.ReadKey();
             }
             else if (PlayersNameCorrect.ToLower() == "no" || PlayersNameCorrect.ToLower() == "n")
             {
                 Console.WriteLine(currentPlayer.name + " is incorrect? Please think hard on your name, this is your last opportunity to change it.");
                 currentPlayer.name = Console.ReadLine();
-                Console.WriteLine(currentPlayer.name + " is your name now. Please enjoy your stay!");
+                Console.WriteLine(currentPlayer.name + " is your name now. Remember your values!");
                 Console.ReadKey();
             }
-           
+
             else
             {
                 Console.WriteLine("I'm sorry I don't recongnize that input. Please try again.");
@@ -98,8 +101,52 @@ namespace Ignorance_is_Blissful
                 Console.WriteLine("Ah " + currentPlayer.name + " are you finally awake sweetheart? You were out like a light!\nDid you get any sleep at your father's?");
             }
             Console.ReadKey();
-            Console.Clear();
-        }
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Please type, your answer.");
+            Console.ForegroundColor = ConsoleColor.Gray;
 
+            string CharacterAnswer = Console.ReadLine();
+
+            switch (CharacterAnswer)
+            {
+                case "Yes":
+                    Console.WriteLine("For some reason, you can't physically bring yourself to say this response.\nYou admit to your mother you haven't" +
+                        " been sleeping weel at your father's.");
+                    break;
+                case "No":
+                    Console.WriteLine("You can't lie to your mother, you admit you haven't been getting sleeping at your fathers.");
+                    break;
+                default:
+                    Console.WriteLine("You stare at your mother tiredly. She takes this as a yes.");
+                    break;
+            }
+
+            Console.ReadKey();
+            Console.Clear();
+
+
+        }
+        public static void EnteringTheGrocer()
+        {
+            string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\EnteringTheGrocery.txt";
+
+            //string[] lines = File.ReadAllLines(filePath);
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach (String line in lines)
+            {
+                Console.WriteLine(line);
+            }
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("Always so eager to please, you look up at your mom ready for the responsibility she was about to give you.");
+            Console.WriteLine("She reached in her pocket digging out a Pharmacy receipt, and a pen. She began to scribble on it, and handed it to you.");
+
+            Console.WriteLine("''I think your getting old enough.'' She says softly, ''for you to grab some groceries yourself. It's empty, and if anything goes wrong yell okay?");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(currentPlayer.name + "recieved one **GroceryList**!");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }
