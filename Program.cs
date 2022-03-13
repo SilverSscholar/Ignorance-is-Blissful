@@ -64,14 +64,7 @@ namespace Ignorance_is_Blissful
                 Console.WriteLine(currentPlayer.name + " is your name now. Please enjoy your stay!");
                 Console.ReadKey();
             }
-            else if (PlayersNameCorrect == "") 
-            {
-                Console.WriteLine("___ is not a valid name, please try again.");
-                Console.ReadKey();
-                Console.Clear();
-                DialogueOne();
-                GatheringThePlayersName();
-            }
+           
             else
             {
                 Console.WriteLine("I'm sorry I don't recongnize that input. Please try again.");
@@ -96,8 +89,14 @@ namespace Ignorance_is_Blissful
             {
                 Console.WriteLine(line);
             }
-            Console.WriteLine("Ah " + currentPlayer.name + " are you finally awake sweetheart? You were out like a light!\nDid you get any sleep at your father's?");
-
+            if (currentPlayer.name == "")
+            {
+                Console.WriteLine("Ah, hey sweetie are you finally awake? You were out like a light! Did you get any sleep at all at your father's?");
+            }
+            else
+            {
+                Console.WriteLine("Ah " + currentPlayer.name + " are you finally awake sweetheart? You were out like a light!\nDid you get any sleep at your father's?");
+            }
             Console.ReadKey();
             Console.Clear();
         }
