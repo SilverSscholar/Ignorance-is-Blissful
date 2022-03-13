@@ -141,12 +141,30 @@ namespace Ignorance_is_Blissful
             Console.Clear();
 
             Console.WriteLine("Always so eager to please, you look up at your mom ready for the responsibility she was about to give you.");
-            Console.WriteLine("She reached in her pocket digging out a Pharmacy receipt, and a pen. She began to scribble on it, and handed it to you.");
+            Console.WriteLine("She reached in her pocket digging out her cellphone, and a PEAR pen. She began to scribble on it, and handed it to you.");
 
-            Console.WriteLine("''I think your getting old enough.'' She says softly, ''for you to grab some groceries yourself. It's empty, and if anything goes wrong yell okay?");
+            Console.WriteLine("I think your getting old enough. To grab some groceries yourself.\nThe store is empty, and if anything goes wrong you can yell for me okay?");
+            Console.ReadKey();
+            Console.Clear();
+
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(currentPlayer.name + "recieved one **GroceryList**!");
+            Console.WriteLine(currentPlayer.name + " recieved one **Mom's Phone/Grocery List**!");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.ReadKey();
+            Console.Clear();
+
+            DateTime currentDateTime = DateTime.Now;
+            DateTime upcomingDateTime = DateTime.Now.AddDays(10);
+            Console.WriteLine("In the top corner of the grocery list you see the date.");
             Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(currentDateTime);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("In the right hand corner of the grocery list, you see a different date.");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(upcomingDateTime);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
