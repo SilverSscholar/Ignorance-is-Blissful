@@ -20,6 +20,7 @@ namespace Ignorance_is_Blissful
         {
             IntroScreen();
             DialogueOne();
+            GatheringThePlayersName();
         }
         //starting scene
         static public void IntroScreen()
@@ -30,8 +31,23 @@ namespace Ignorance_is_Blissful
             Console.ReadKey();
             Console.Clear();
         }
-
+        //First intro dialogue using a .txt file
         static public void DialogueOne()
+        {
+            string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\DialogueOneWhatIsYourName.txt";
+
+            //string[] lines = File.ReadAllLines(filePath);
+             List<string> lines = new List<string>();
+             lines = File.ReadAllLines(filePath).ToList();
+             foreach (String line in lines)
+             {
+                 Console.WriteLine(line);
+             }
+             Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+        }
+        static public void GatheringThePlayersName()
         {
 
         }
