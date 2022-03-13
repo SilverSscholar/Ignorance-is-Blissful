@@ -79,7 +79,17 @@ namespace Ignorance_is_Blissful
         }
         static public void SceneOne()
         {
+            string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\SceneOneDialogueOneCarTrip.txt";
 
+            //string[] lines = File.ReadAllLines(filePath);
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach (String line in lines)
+            {
+                Console.WriteLine(line);
+            }
+            Console.ReadKey();
+            Console.Clear();
         }
 
     }
