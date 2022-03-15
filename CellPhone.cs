@@ -40,6 +40,18 @@ namespace Ignorance_is_Blissful
                     Console.Clear();
                     Notes();
                     break;
+                case "5":
+                    Console.Clear();
+                    Weather();
+                    break;
+                case "6":
+                    Console.Clear();
+                    Items();
+                    break;
+                case "7":
+                    Console.Clear();
+                    Exit();
+                    break;
             }
 
 
@@ -69,7 +81,75 @@ namespace Ignorance_is_Blissful
         }
         public static void Messages ()
         {
-            Console.WriteLine("This is where you check your messages");
+            Console.WriteLine("This is where your mom's messages are located.");
+            Console.WriteLine("|               |");
+            Console.WriteLine("|[1]Rubert >:(  |");
+            Console.WriteLine("|[2]Mom/Gramma  |");
+            Console.WriteLine("|[3]Alex <3     |");
+            Console.WriteLine("|[4]Exit        |");
+            Console.WriteLine("|               |");
+
+            string displayMessages = Console.ReadLine();
+            switch(displayMessages)
+            {
+                case "1":
+                    string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\RubertVSNicole.txt";
+
+                    //string[] lines = File.ReadAllLines(filePath);
+                    List<string> lines = new List<string>();
+                    lines = File.ReadAllLines(filePath).ToList();
+                    foreach (String line in lines)
+                    {
+                        Console.WriteLine(line);
+                    }
+                    Console.ReadKey();
+                    Console.Clear();
+                    Messages();
+                    break;
+                case "2":
+                    Console.Clear();
+                    string filePath2 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVSGrandma.txt";
+
+                    //string[] lines = File.ReadAllLines(filePath);
+                    List<string> lines1 = new List<string>();
+                    lines1 = File.ReadAllLines(filePath2).ToList();
+                    foreach (String line in lines1)
+                    {
+                        Console.WriteLine(line);
+                    }
+                    Console.ReadKey();
+                    Console.Clear();
+                    Messages();
+                    break;
+                case "3":
+                    Console.Clear();
+                     string filePath3 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVsAlex.txt";
+
+                    //string[] lines = File.ReadAllLines(filePath);
+                    List<string> lines3 = new List<string>();
+                    lines3 = File.ReadAllLines(filePath3).ToList();
+                    foreach (String line in lines3)
+                    {
+                        Console.WriteLine(line);
+                    }
+
+                    Console.ReadKey();
+                    Console.Clear();
+                    Messages();
+                    break;
+                case "4":
+                    PHONEGUI();
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+                default:
+                    PHONEGUI();
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+
+            }
+
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();
@@ -77,7 +157,9 @@ namespace Ignorance_is_Blissful
 
         public static void Memos()
         {
-            Console.WriteLine("This is your player status.");
+            Console.WriteLine("Your name is :" +Program.currentPlayer.name);
+            Console.WriteLine("Your current health is : "+Program.currentPlayer.health);
+            Console.WriteLine("Your defense is : "+ Program.currentPlayer.defense);
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();
@@ -92,6 +174,7 @@ namespace Ignorance_is_Blissful
         public static void Weather()
         {
             Console.WriteLine("This will display the weather.");
+           
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();

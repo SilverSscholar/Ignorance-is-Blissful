@@ -9,7 +9,8 @@ namespace Ignorance_is_Blissful
     public class Player
     {
         public string name;
-        public int health = 5;
-        public int damage = 20;
+        public int health = 10;
+        public int damage = 3;
+        public int defense = 2;
     }
 }
