@@ -1,0 +1,5 @@
+[1] Pizza Rolls
+[2] Milk
+[3] Bread
+[4] Flour/Sugar
+[5] USB-C Charger Cord

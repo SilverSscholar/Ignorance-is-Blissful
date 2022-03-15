@@ -54,9 +54,7 @@ namespace Ignorance_is_Blissful
                     break;
             }
 
-
-        }
-       
+        }    
         public static void Contacts()
         {
             List<string> contacts = new List<string>();
@@ -76,8 +74,6 @@ namespace Ignorance_is_Blissful
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();
-
-
         }
         public static void Messages ()
         {
@@ -88,13 +84,11 @@ namespace Ignorance_is_Blissful
             Console.WriteLine("|[3]Alex <3     |");
             Console.WriteLine("|[4]Exit        |");
             Console.WriteLine("|               |");
-
             string displayMessages = Console.ReadLine();
             switch(displayMessages)
             {
                 case "1":
                     string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\RubertVSNicole.txt";
-
                     //string[] lines = File.ReadAllLines(filePath);
                     List<string> lines = new List<string>();
                     lines = File.ReadAllLines(filePath).ToList();
@@ -109,7 +103,6 @@ namespace Ignorance_is_Blissful
                 case "2":
                     Console.Clear();
                     string filePath2 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVSGrandma.txt";
-
                     //string[] lines = File.ReadAllLines(filePath);
                     List<string> lines1 = new List<string>();
                     lines1 = File.ReadAllLines(filePath2).ToList();
@@ -124,7 +117,6 @@ namespace Ignorance_is_Blissful
                 case "3":
                     Console.Clear();
                      string filePath3 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVsAlex.txt";
-
                     //string[] lines = File.ReadAllLines(filePath);
                     List<string> lines3 = new List<string>();
                     lines3 = File.ReadAllLines(filePath3).ToList();
@@ -132,7 +124,6 @@ namespace Ignorance_is_Blissful
                     {
                         Console.WriteLine(line);
                     }
-
                     Console.ReadKey();
                     Console.Clear();
                     Messages();
@@ -147,9 +138,7 @@ namespace Ignorance_is_Blissful
                     Console.ReadKey();
                     Console.Clear();
                     break;
-
             }
-
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();
@@ -167,6 +156,16 @@ namespace Ignorance_is_Blissful
         public static void Notes()
         {
             Console.WriteLine("This is where the grocery list is located.");
+
+            string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\GroceryList.txt";
+
+            //string[] lines = File.ReadAllLines(filePath);
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach (String line in lines)
+            {
+                Console.WriteLine(line);
+            }
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();
