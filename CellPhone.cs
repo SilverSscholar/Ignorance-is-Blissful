@@ -13,11 +13,11 @@ namespace Ignorance_is_Blissful
             Console.ReadKey();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("========================================");
-            Console.WriteLine("| [1] Contacts  [2] Messages  [3] Memos |");
-            Console.WriteLine("| [4] Notes     [5] Weather   [6] Items |");
-            Console.WriteLine("| [7] Exit                              |");
-            Console.WriteLine("========================================");
+            Console.WriteLine("=========================================");
+            Console.WriteLine("| [1] Contacts  [2] Messages   [3] Memos |");
+            Console.WriteLine("| [4] Notes     [5] Calculator [6] Items |");
+            Console.WriteLine("| [7] Exit                               |");
+            Console.WriteLine("=========================================");
 
             Console.WriteLine("Please input your option.");
 
@@ -42,7 +42,7 @@ namespace Ignorance_is_Blissful
                     break;
                 case "5":
                     Console.Clear();
-                    Weather();
+                    Calculator();
                     break;
                 case "6":
                     Console.Clear();
@@ -170,10 +170,40 @@ namespace Ignorance_is_Blissful
             Console.Clear();
             PHONEGUI();
         }
-        public static void Weather()
+        public static void Calculator()
         {
-            Console.WriteLine("This will display the weather.");
-           
+            char op;
+            double num1, num2;
+            Console.WriteLine("Enter the operator (+, -, /, *)");
+            op = Console.ReadLine()[0];
+            Console.WriteLine("Enter the two numbers, one by one.");
+            Console.WriteLine("Press any other button to leave the interface.");
+            num1 = Convert.ToDouble(Console.ReadLine());
+            num2 = Convert.ToDouble(Console.ReadLine());
+
+            switch (op)
+            {
+                case '+':
+                    Console.WriteLine("{0} + {1} = {2}",num1, num2,(num1+num2));
+                    break;
+                case '-':
+                    Console.WriteLine("{0} - {1} = {2}", num1, num2, (num1 - num2));
+                    break;
+                case '/':
+                    if (num2 == 0.0)
+                        Console.WriteLine("Divide by zero situation.");
+                    else
+                        Console.WriteLine("{0} / {1} = {2}", num1,num2, (num1 / num2));
+                    break;
+                case '*':
+                    Console.WriteLine("{0} + {1} = {2}", num1, num2, (num1 * num2));
+                    break;
+                default:
+                    PHONEGUI();
+                    break;
+                   
+            }
+
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();
