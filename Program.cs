@@ -16,7 +16,7 @@ namespace Ignorance_is_Blissful
         //introduce a combat class
         //introduce a player class
         //call dialogue from a .txt file 
-        
+
         public static Player currentPlayer = new Player();
         static void Main(string[] args)
         {
@@ -25,6 +25,7 @@ namespace Ignorance_is_Blissful
             GatheringThePlayersName();
             SceneOne();
             EnteringTheGrocer();
+            UsingThePhone();
         }
         //starting scene
         static public void IntroScreen()
@@ -160,20 +161,23 @@ namespace Ignorance_is_Blissful
             Console.WriteLine(currentDateTime);
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("In the right hand corner of the grocery list, you see a different date.");
-            Console.WriteLine("You ask your mom why there's two dates on her phone.");
-            Console.WriteLine("\nShe smiles at you fondly and informs you that your birthday is in three days. Don't you remember silly?");
-            Console.WriteLine("\n...Strangely enough you don't remember...");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(upcomingDateTime);
             Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("You ask your mom why there's two dates on her phone.");
+            Console.WriteLine("\nShe smiles at you fondly and informs you that your birthday is in three days. Don't you remember silly?");
+            Console.WriteLine("\n\n...Strangely enough you don't remember...");
             Console.ReadKey();
             Console.Clear();
 
             Console.WriteLine("Your mother, smiles and tells you that you can use the notepad app on her phone to look at the grocery list.\n She opens it for you" +
-                " before she takes a cart and leaves you in the aisle's by yourself.");
-
+                " showing you how to use it..");
+            Console.ReadKey();
+            Console.Clear();
         }
-       
+        public static void UsingThePhone()
+        {
+            CellPhone.PHONEGUI();
         }
     }
 }
