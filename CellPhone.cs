@@ -116,7 +116,7 @@ namespace Ignorance_is_Blissful
                     break;
                 case "3":
                     Console.Clear();
-                     string filePath3 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVsAlex.txt";
+                     string filePath3 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVSAlex.txt";
                     //string[] lines = File.ReadAllLines(filePath);
                     List<string> lines3 = new List<string>();
                     lines3 = File.ReadAllLines(filePath3).ToList();
@@ -174,9 +174,9 @@ namespace Ignorance_is_Blissful
         {
             char op;
             double num1, num2;
-            Console.WriteLine("Enter the operator (+, -, /, *)");
+            Console.WriteLine("First, enter the operator (+, -, /, *)");
             op = Console.ReadLine()[0];
-            Console.WriteLine("Enter the two numbers, one by one.");
+            Console.WriteLine("Enter the two numbers, inserting one hitting enter, then inputting the second one.");
             Console.WriteLine("Press any other button to leave the interface.");
             num1 = Convert.ToDouble(Console.ReadLine());
             num2 = Convert.ToDouble(Console.ReadLine());
@@ -210,16 +210,18 @@ namespace Ignorance_is_Blissful
         }
         public static void Items()
         {
-            Console.WriteLine("This will access your character inventory/items.");
+            Inventory.INVENTORYGUI();
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();
         }
         public static void Exit()
         {
-            Console.WriteLine("This will allow you to exit the GUI");
+            
             Console.ReadKey();
             Console.Clear();
+            Program.DoneWithThePhone();
+            
             
         }
     }

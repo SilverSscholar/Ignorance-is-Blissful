@@ -19,6 +19,7 @@ namespace Ignorance_is_Blissful
         //call dialogue from a .txt file 
 
         public static Player currentPlayer = new Player();
+        public static Inventory inventory = new Inventory();
         static void Main(string[] args)
         {
             IntroScreen();
@@ -27,6 +28,7 @@ namespace Ignorance_is_Blissful
             SceneOne();
             EnteringTheGrocer();
             UsingThePhone();
+            DoneWithThePhone();
         }
         //starting scene
         static public void IntroScreen()
@@ -175,14 +177,24 @@ namespace Ignorance_is_Blissful
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("Your mother, smiles and tells you that you can use the notepad app on her phone to look at the grocery list.\n She opens it for you" +
-                " showing you how to use it..");
+            Console.WriteLine("Your mother, smiles and tells you that you can use the notepad app on her phone to look at the grocery list.\nShowing you how to turn it on.");
             Console.ReadKey();
             Console.Clear();
         }
         public static void UsingThePhone()
         {
             CellPhone.PHONEGUI();
+        }
+        public static void DoneWithThePhone()
+        {
+            Console.WriteLine("You exited the phones interface.");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("You mom smiles fondly at you. ");
+            Console.WriteLine("'Good job sweetie!\nNow,I'm gonna run see if I can find a worker, can you get the stuff on that list for me?");
+            Console.WriteLine("You give your mom an affirmative nod, as you begin your trek, to the aisles.");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
