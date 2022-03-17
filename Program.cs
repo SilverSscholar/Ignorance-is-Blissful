@@ -91,15 +91,39 @@ namespace Ignorance_is_Blissful
         }
         static public void SceneOne()
         {
-            string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\SceneOneDialogueOneCarTrip.txt";
+            var FilePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\DialogueOneWhatIsYourName.txt";
+            try
+            {
+                using (StreamReader sr = new StreamReader(FilePath))
+                {
+                    string line;
+
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                //something went wrong
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("This file could not be read:");
+                //
+                Console.WriteLine("Compliling error.");
+                Console.ReadKey();
+                Console.Clear();
+
+            }
+            //string filePath = @"C:Ignorance is Blissful\SceneOneDialogueOneCarTrip.txt";
 
             //string[] lines = File.ReadAllLines(filePath);
-            List<string> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
-            foreach (String line in lines)
-            {
-                Console.WriteLine(line);
-            }
+            //List<string> lines = new List<string>();
+            //lines = File.ReadAllLines(filePath).ToList();
+           // foreach (String line in lines)
+           // {
+              //  Console.WriteLine(line);
+           // }
             if (currentPlayer.name == "")
             {
                 Console.WriteLine("Ah, hey sweetie are you finally awake? You were out like a light! Did you get any sleep at all at your father's?");
