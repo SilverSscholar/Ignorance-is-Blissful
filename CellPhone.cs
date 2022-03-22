@@ -155,13 +155,40 @@ namespace Ignorance_is_Blissful
                     break;
                 case "3":
                     Console.Clear();
-                     string filePath4 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVSAlex.txt";
-                    //string[] lines = File.ReadAllLines(filePath);
-                    List<string> lines4 = new List<string>();
-                    lines4 = File.ReadAllLines(filePath4).ToList();
-                    foreach (String line in lines4)
+                     string filePath4 = @"NicoleVSAlex.txt";
+                    string[] lines4;
+                    try
                     {
-                        Console.WriteLine(line);
+                        lines4 =File.ReadAllLines(filePath4);
+                    }
+                    catch
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("File could not be intiated, back up text produced.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ReadKey();
+                        Console.Clear();
+                        Console.WriteLine("-So your mom told me what was going on,");
+                        Console.WriteLine(" you doing alright?");
+                        Console.WriteLine("Sent 11:45AM");
+                        Console.WriteLine("\n          Ugh to be honest not really,");
+                        Console.WriteLine("                   I'm mad as all hell.-");
+                        Console.WriteLine("                            Sent 11:47AM");
+                        Console.WriteLine("\n-That's fair enough honey, also sorry for");
+                        Console.WriteLine("asking but your not texting and driving?   ");
+                        Console.WriteLine("Sent 11:49AM");
+                        Console.WriteLine("\n        No, no pitstop at the gas station,");
+                        Console.WriteLine("                 drinks, gas, and the like.-");
+                        Console.WriteLine("                            Sent 11:50AM    ");
+                        Console.WriteLine("\n-Okay cool, I was worried there,");
+                        Console.WriteLine("for a second there ngl.");
+                        Console.WriteLine("Sent 11:51AM");
+                        Console.WriteLine("\n           I'm pissed not a moron, honey.-");
+                        Console.WriteLine("                              Sent 11:51AM  ");
+                        Console.WriteLine("\nFair enough, I'll see you tonight! Please,");
+                        Console.WriteLine("be careful on the roads! <3!<3!<3!");
+                        Console.ReadKey();
+                        Console.Clear();
                     }
                     Console.ReadKey();
                     Console.Clear();
@@ -196,15 +223,41 @@ namespace Ignorance_is_Blissful
         {
             Console.WriteLine("This is where the grocery list is located.");
 
-            string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\GroceryList.txt";
-
-            //string[] lines = File.ReadAllLines(filePath);
-            List<string> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
-            foreach (String line in lines)
+            string filePath6 = @"GroceryList.txt";
+            try
             {
-                Console.WriteLine(line);
+                List<string> lines6 = new List<string>();
+                lines6 = File.ReadAllLines(filePath6).ToList();
+                foreach (string line in lines6)
+                {
+                    Console.WriteLine(lines6);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("This file could not be produced, backup file applied.");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.ReadKey();
+                Console.Clear();
+
+                List<string> items = new List<string>();
+                items.Add("Pizza Rolls");
+                items.Add("Milk");
+                items.Add("Bread");
+                items.Add("Flour/Sugar");
+                items.Add("USB-C Charger Cord");
+                //Display item list
+               
+               foreach (String item in items)
+                {
+                    Console.WriteLine(item);
+                }
+                Console.ReadKey();
+                Console.Clear();
+            }
+            //string[] lines = File.ReadAllLines(filePath);
+           
             Console.ReadKey();
             Console.Clear();
             PHONEGUI();
