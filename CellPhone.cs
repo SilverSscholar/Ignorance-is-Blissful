@@ -88,13 +88,29 @@ namespace Ignorance_is_Blissful
             switch(displayMessages)
             {
                 case "1":
-                    string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\RubertVSNicole.txt";
-                    //string[] lines = File.ReadAllLines(filePath);
-                    List<string> lines = new List<string>();
-                    lines = File.ReadAllLines(filePath).ToList();
-                    foreach (String line in lines)
+                    string filePath3 = @"RubertVSNicole.txt";
+                    string[] lines3;
+                    try
                     {
-                        Console.WriteLine(line);
+                        lines3 = File.ReadAllLines(filePath3);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("File Could not be produced back up file implemented.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("-FFS Nicole Come get your fucking kid!");
+                        Console.WriteLine("-Sent 4:00AM");
+                        Console.WriteLine("\n     -Are you being fucking serious,\n" +
+                            "                        it's their birthday this week!\n" +
+                            "                                         -Sent 4:02AM");
+                        Console.WriteLine("\n-I don't want to keep the brat,");
+                        Console.WriteLine("and no you crazy b**** it's not this week!");
+                        Console.WriteLine("Sent 4:03AM");
+                        Console.WriteLine("\n        -I can't fucking believe you, " +
+                            "\n                         don't even want to see your child on their birthday"+
+                            "\n                                                         I'll be there at 7." +
+                            "\n                                                                -Sent 4:10AM");
                     }
                     Console.ReadKey();
                     Console.Clear();
@@ -102,25 +118,48 @@ namespace Ignorance_is_Blissful
                     break;
                 case "2":
                     Console.Clear();
-                    string filePath2 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVSGrandma.txt";
-                    //string[] lines = File.ReadAllLines(filePath);
-                    List<string> lines1 = new List<string>();
-                    lines1 = File.ReadAllLines(filePath2).ToList();
-                    foreach (String line in lines1)
+                    string filePath5 = @"NicoleVSGrandma.txt";
+                    string[] lines5;
+                    try
                     {
-                        Console.WriteLine(line);
+                        lines5 =File.ReadAllLines(filePath5);
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("File could not be read, back up file intiated.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ReadKey();
+                        Console.Clear();
+                        Console.WriteLine("                     -Mom I'm super worried.");
+                        Console.WriteLine("                               - Sent 7:15AM");
+                        Console.WriteLine("\n-What did that b*stard do now?");
+                        Console.WriteLine(" -Sent 7:17AM");
+                        Console.WriteLine("\n    -I dunno but their being super quiet rn,");
+                        Console.WriteLine("                        it's very unlike them.");
+                        Console.WriteLine("                                  -Sent 7:18AM");
+                        Console.WriteLine("\n-Do you think its more than just Rubert?");
+                        Console.WriteLine("-Sent 7:20AM");
+                        Console.WriteLine("\n            -I'm sure Rubert has been an ass,");
+                        Console.WriteLine("               but I think it's more than that.");
+                        Console.WriteLine("               we're at the WCNolads rn. They, ");
+                        Console.WriteLine("                    haven't ate anything yet.  ");
+                        Console.WriteLine("                                   -Sent 7:25AM");
+                        Console.WriteLine("\nWell it could just be stress sweetie,");
+                        Console.WriteLine("they're still too young to develop the 'condition'");
+                        Console.WriteLine("Sent 7:28AM");
                     }
                     Console.ReadKey();
                     Console.Clear();
-                    Messages();
+                   
                     break;
                 case "3":
                     Console.Clear();
-                     string filePath3 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVSAlex.txt";
+                     string filePath4 = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\NicoleVSAlex.txt";
                     //string[] lines = File.ReadAllLines(filePath);
-                    List<string> lines3 = new List<string>();
-                    lines3 = File.ReadAllLines(filePath3).ToList();
-                    foreach (String line in lines3)
+                    List<string> lines4 = new List<string>();
+                    lines4 = File.ReadAllLines(filePath4).ToList();
+                    foreach (String line in lines4)
                     {
                         Console.WriteLine(line);
                     }

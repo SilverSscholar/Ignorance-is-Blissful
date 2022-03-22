@@ -46,16 +46,20 @@ namespace Ignorance_is_Blissful
         //First intro dialogue using a .txt file
         static public void DialogueOne()
         {
-            string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\DialogueOneWhatIsYourName.txt";
-
-            //string[] lines = File.ReadAllLines(filePath);
-            List<string> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
-            foreach (String line in lines)
+            string filePath = @"DialogueOneWhatIsYourName.txt";
+            string[] lines;
+            try
             {
-                Console.WriteLine(line);
+                lines = File.ReadAllLines(filePath);
             }
-
+            catch (FileNotFoundException exnotfound)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("File not found. Backup-file produced: ");
+                Console.ForegroundColor= ConsoleColor.Gray;
+                Console.WriteLine("\nWithin the befuddling recesses of your mind.\n " +
+                    "You struggle to think about what you would like to be called.\n\nPlease insert your name.");
+            }
 
         }
         static public void GatheringThePlayersName()
@@ -91,7 +95,7 @@ namespace Ignorance_is_Blissful
         }
         static public void SceneOne()
         {
-            var FilePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\DialogueOneWhatIsYourName.txt";
+            var FilePath = @"DialogueOneWhatIsYourName.txt";
             try
             {
                 using (StreamReader sr = new StreamReader(FilePath))
@@ -108,9 +112,11 @@ namespace Ignorance_is_Blissful
             {
                 //something went wrong
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("This file could not be read:");
-                //
-                Console.WriteLine("Compliling error.");
+                Console.WriteLine("This file could not be read, backup file produced.");
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine("\nYou awaken from your tired stupor. The drull thud of raindrops hitting your window.\n" +
+                    "You've been stuck in this car all the way from Georgia, and you wanted your bed.\n" +
+                    "Adjusting yourself in your carseat, making an annoyed huff at the belt that held you down.");
                 Console.ReadKey();
                 Console.Clear();
 
@@ -160,14 +166,43 @@ namespace Ignorance_is_Blissful
         }
         public static void EnteringTheGrocer()
         {
-            string filePath = @"C:\Users\Trinity\Desktop\School Work\Ignorance is Blissful\Ignorance is Blissful\EnteringTheGrocery.txt";
-
-            //string[] lines = File.ReadAllLines(filePath);
-            List<string> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
-            foreach (String line in lines)
+            string filePath2 = @"EnteringTheGrocery.txt";
+            string[] lines2;
+            try
             {
-                Console.WriteLine(line);
+                lines2 = File.ReadAllLines(filePath2);
+            }
+          
+            catch (Exception FileNotFoundException)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("File not displayed properly, backup text produced:");
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("Your mother gives you a pitying look.");
+                Console.WriteLine("'It'll be okay honey,' she assures you.");
+                Console.WriteLine("\n'We just have to stop at the market and then we'll go home I promise, and you can sleep in your bed.'");
+                Console.WriteLine("\nYou nod tiredly, there wasn't much more you could do.");
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("The rain is coming down harder now as you arrive off the interstate. The KREUGER lights welcoming you to your exit.\n"
+                    + "The lot was mostly empty, and why wouldn't it be it was practically midnight. You think.");
+                Console.WriteLine("You sleepily take off your seatbelt buckle, and your mom opens the door for you.\n\nDamn child-locks.");
+                Console.WriteLine("Your Pukicho footies were immediately drenched in the waters of the lot. Neither one of you had an umbrella.");
+                Console.WriteLine("You both made a mad dash for the door.\nOnly managing to get completely drenched in the process.");
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("It was a little strange going inside the empty store.\nThere were no employees at the register, giving you an eerie feeling.");
+                Console.WriteLine("You asked your mom why it was so empty.");
+                Console.WriteLine("\nShe assured you that it was late, and that most people are home at this time except for janitors.");
+                Console.WriteLine("You asked her how you were going to by groceries without cashiers.");
+                Console.WriteLine("She assures you that you both can use the self scans.");
+                Console.WriteLine("\nYou inform her that dad said Self-Scans are evil.");
+                Console.WriteLine("\nShe scoffs and very visibly rolls her eyes.");
+                Console.WriteLine("\n'That aside' she muses, 'I do have a very important job for you come here.");
+
+                
             }
             Console.ReadKey();
             Console.Clear();
@@ -175,7 +210,8 @@ namespace Ignorance_is_Blissful
             Console.WriteLine("Always so eager to please, you look up at your mom ready for the responsibility she was about to give you.");
             Console.WriteLine("She reached in her pocket digging out her cellphone, and a PEAR pen. She began to scribble on it, and handed it to you.");
 
-            Console.WriteLine("I think your getting old enough. To grab some groceries yourself.\nThe store is empty, and if anything goes wrong you can yell for me okay?");
+            Console.WriteLine("'I think your getting old enough. To grab some groceries yourself.\nThe store is empty, and if anything goes wrong you can yell for me okay?'");
+            Console.WriteLine("\nYou nod eager for this independence you have just recieved.");
             Console.ReadKey();
             Console.Clear();
 
