@@ -29,6 +29,7 @@ namespace Ignorance_is_Blissful
             EnteringTheGrocer();
             UsingThePhone();
             DoneWithThePhone();
+            FirstEncounter();
         }
         //starting scene
         static public void IntroScreen()
@@ -247,6 +248,7 @@ namespace Ignorance_is_Blissful
         }
         public static void DoneWithThePhone()
         {
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("You exited the phones interface.");
             Console.ReadKey();
             Console.Clear();
@@ -255,6 +257,33 @@ namespace Ignorance_is_Blissful
             Console.WriteLine("You give your mom an affirmative nod, as you begin your trek, to the aisles.");
             Console.ReadKey();
             Console.Clear();
+        }
+        public static void FirstEncounter()
+        {
+            Console.WriteLine("You find yourself walking down the aisle's the list in your hand.");
+            Console.WriteLine("The first thing on your list is Pizza Rolls.");
+            Console.WriteLine("You make your way down to the frozen aisle.");
+            Console.WriteLine("\nWalking down the aisle, you see fridges stocked with multiple goods.");
+            Console.WriteLine("There was nothing particularly off at first glance of the aisles goods.");
+            Console.WriteLine("You approached the frozen pizza's and stared intently at the packages.");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("The first package to catch your eye is a circular pizza.\nWrapped in saran wrap, with a cardbord base.");
+            Console.WriteLine("You also take note that toppings on the pizza don't quite look like sausages.\nThe toppings are " +
+                "bright pink, looking more akin to hotdogs with segmented notches upon it.\n");
+            Console.WriteLine("\nYou continue your trek for pizza rolls observing more of the boxes in the fridges.");
+            Console.WriteLine("As you look through the boxes you see one that reads Pizza Rolls.");
+            Console.WriteLine("You open the fridge, reaching in and grabbing the box.\nAs you take out the pizza roll box" +
+                "you feel a syrupy texture on the box.\nIt was a thick red and dripped slightly on the floor.");
+            Console.ReadKey();
+            Console.Clear();
+            
+            Console.WriteLine("You recieved:");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("*****Pizza Roll Box?*****");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("You shove the pizza box into your shirt, and you start to head back down the aisle.");
+            Console.WriteLine("However; you are stopped when running into something that feels like a wall.");
         }
     }
 }
