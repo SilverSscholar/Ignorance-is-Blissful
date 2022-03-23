@@ -10,9 +10,11 @@ namespace Ignorance_is_Blissful
     {
         public string name;
         public int health = 10;
-        public int damage = 2;
+        public int damage = 1;
         public int defense = 2;
-        public int armourValue = 5;
-        public int weaponValue = 5;
+        public int armourValue = 0;
+        public int weaponValue = 2;
+        public int coins = 0;
+
     }
 }
