@@ -8,7 +8,7 @@ namespace Ignorance_is_Blissful
 {
     public class Inventory
     {
-        public int puckichoArmour = 5;
+        public int puckichoArmour = 0;
         public int toyKnifeDamage = 3;
         public int stickDamage = 2;
         public int bugJuiceHealth = 4;
@@ -21,9 +21,9 @@ namespace Ignorance_is_Blissful
             Console.Clear();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("| [1] Armour [2] Weapons [3] Food   |");
-            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("| [1] Armour [2] Weapons [3] Food  [4]Exit   |");
+            Console.WriteLine("----------------------------------------------");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("Please make a selection! Use any other key to return to the CellPhone.");
 
@@ -39,8 +39,12 @@ namespace Ignorance_is_Blissful
                 case "3":
                     Food();
                     break;
-                    default:
+                case "4":
                     CellPhone.PHONEGUI();
+                    break;
+                    default:
+                    Console.WriteLine("I'm sorry I don't recongnize that input, please try again.");
+                    INVENTORYGUI();
                     break;
                     
 

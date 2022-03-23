@@ -9,7 +9,7 @@ namespace Ignorance_is_Blissful
     internal class Encounter1
     {
         static Random rand = new Random();
-        
+
 
         public static void FirstEncounter()
         {
@@ -22,7 +22,8 @@ namespace Ignorance_is_Blissful
             Console.WriteLine("\nIt makes an agonizing screech as it reaches it's hands out at you-");
             Console.ReadKey();
             Console.Clear();
-            Combat(false, "Grangy Monster", 10, 10);
+            Combat(false, "Grangly Monster", 10, 10);
+            Program.EndOfDemo();
         }
 
         public static void Combat(bool random, string name, int power, int health)
@@ -42,22 +43,22 @@ namespace Ignorance_is_Blissful
                 p = power;
                 h = health;
             }
-            while(h>0)
+            while (h > 0)
             {
                 Console.Clear();
-                Console.ForegroundColor= ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine(n);
-                Console.WriteLine(p+"/"+h);
+                Console.WriteLine(p + "/" + h);
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("-----------------------");
                 Console.WriteLine("| [A]Attack [D]Defend |");
                 Console.WriteLine("| [F]Flee   [H]Heal   |");
                 Console.WriteLine("-----------------------");
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("Health: "+ Program.currentPlayer.health +"  Available Snacks: " +Program.inventory.bugJuiceInInventory);
+                Console.WriteLine("Health: " + Program.currentPlayer.health + "  Available Snacks: " + Program.inventory.bugJuiceInInventory);
                 Console.ForegroundColor = ConsoleColor.White;
                 string input = Console.ReadLine();
-                if( input.ToLower()=="a" || input.ToLower() =="attack")
+                if (input.ToLower() == "a" || input.ToLower() == "attack")
                 {
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("You attack the " + n + " as it reaches it's hand out to you. As you pass the," + n + "strikes you.");
@@ -65,14 +66,14 @@ namespace Ignorance_is_Blissful
                     if (damageV < 0)
                         damageV = 0;
 
-                    int attackV = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1, 6);
+                    int attackV = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1, 4);
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("You lose " + damageV + " health, and deal " + attackV + " damage.");
                     Program.currentPlayer.health -= damageV;
                     h -= attackV;
 
                 }
-                else if (input.ToLower()=="d"||input.ToLower()=="defend")
+                else if (input.ToLower() == "d" || input.ToLower() == "defend")
                 {
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("As the " + n + " lunges towards you. You hold your arms up in a defensive stance.");
@@ -87,7 +88,7 @@ namespace Ignorance_is_Blissful
                     Program.currentPlayer.health -= damageV;
                     h -= attackV;
                 }
-                else if (input.ToLower()=="f"||input.ToLower()=="flee")
+                else if (input.ToLower() == "f" || input.ToLower() == "flee")
                     if (rand.Next(0, 2) == 0)
                     {
                         Console.WriteLine("As you sprint away from the " + n + " it's strike catches you in the back, sending you sprawling\n " +
@@ -97,6 +98,7 @@ namespace Ignorance_is_Blissful
                             damageV = 0;
 
                         Console.WriteLine("You lose " + damageV + "  health and are unable to escape.");
+                        Program.currentPlayer.health -= damageV;
                         Console.ReadKey();
                     }
                     else
@@ -105,7 +107,7 @@ namespace Ignorance_is_Blissful
                         Console.ReadKey();
                         //go to end of Demo.
                     }
-                else if (input.ToLower()=="h"||input.ToLower()=="heal")
+                else if (input.ToLower() == "h" || input.ToLower() == "heal")
                 {
                     if (Program.inventory.bugJuiceInInventory == 0)
                     {
@@ -116,6 +118,7 @@ namespace Ignorance_is_Blissful
                             damageV = 0;
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("The " + n + "takes your fumbling as an opportunity to strike. Hitting you for " + damageV + " health.");
+                        Program.currentPlayer.health -= damageV;
                         Console.ForegroundColor = ConsoleColor.Gray;
                         Console.ReadKey();
 
@@ -126,7 +129,7 @@ namespace Ignorance_is_Blissful
                         Console.WriteLine("You reach into your pocket, and pull out a bottle of Bug Juice. You take a drink.");
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("You gain, " + Program.inventory.bugJuiceHealth + " health");
-                        Console.WriteLine("You lose 1, " + (Program.inventory.bugJuiceInInventory -= 1) + " Bug Juice.");
+                        Console.WriteLine("You lose 1, Bug Juice. You have " + (Program.inventory.bugJuiceInInventory -= 1) + " remaining.");
                         Program.currentPlayer.health += Program.inventory.bugJuiceHealth;
                         Console.ForegroundColor = ConsoleColor.Gray;
                         Console.ReadKey();
@@ -134,12 +137,15 @@ namespace Ignorance_is_Blissful
                 }
                 Console.ReadKey();
             }
-            if(Program.currentPlayer.health<=0)
+
+            if (h <= 0)
             {
+                Console.ReadKey();
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("The " + n + " strikes you with a final blow, sending you carening into the tile floor.");
                 Console.WriteLine("The world around you starts to fade to black, as you lay on the ground.");
-                Console.WriteLine("The "+n+ " comes towards you as you stare at your reflection on the tiles. A sickly, syrupy red covers the floor.");
+                Console.WriteLine("The " + n + " comes towards you as you stare at your reflection on the tiles.\nA sickly, syrupy red covers the floor.");
                 Console.ReadKey();
                 Console.Clear();
                 Console.WriteLine("Soon enough. The light will leave you eyes.");
@@ -152,13 +158,13 @@ namespace Ignorance_is_Blissful
                 Console.Clear();
                 Console.WriteLine("Thank you so much for playing my demo! -Trinity Prichard");
                 Console.ReadKey();
+                Console.Clear();
                 System.Environment.Exit(0);
             }
-            int c = rand.Next(10, 50);
-            Console.WriteLine("As you stand victorious over the " +n+" it's body dissolves into a puddle on the floor.\nFrom this puddle on the floor" +
-                "you recieved "+c+" coins? They're covered in red syrupy liquid.");
             Console.ReadKey();
+
+
         }
-        
     }
 }
+

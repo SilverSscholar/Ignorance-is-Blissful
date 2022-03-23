@@ -298,23 +298,20 @@ namespace Ignorance_is_Blissful
 
             Console.ReadKey();
             Console.Clear();
-            PHONEGUI();
+           
         }
         public static void Items()
         {
             Inventory.INVENTORYGUI();
             Console.ReadKey();
             Console.Clear();
-            PHONEGUI();
         }
         public static void Exit()
         {
-            
+            Console.WriteLine("You exit the phone's interface.");
             Console.ReadKey();
             Console.Clear();
-            Program.DoneWithThePhone();
-            
-            
+            Program.DoneWithThePhone();   
         }
     }
 }

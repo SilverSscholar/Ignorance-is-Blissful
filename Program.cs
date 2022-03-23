@@ -29,6 +29,7 @@ namespace Ignorance_is_Blissful
             EnteringTheGrocer();
             UsingThePhone();
             DoneWithThePhone();
+            StartingYourMission();
             FirstEncounter();
             Encounter1.FirstEncounter();
         }
@@ -249,10 +250,10 @@ namespace Ignorance_is_Blissful
         }
         public static void DoneWithThePhone()
         {
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("You exited the phones interface.");
-            Console.ReadKey();
             Console.Clear();
+        }
+        public static void StartingYourMission()
+        {
             Console.WriteLine("You mom smiles fondly at you. ");
             Console.WriteLine("'Good job sweetie!\nNow,I'm gonna run see if I can find a worker, can you get the stuff on that list for me?");
             Console.WriteLine("You give your mom an affirmative nod, as you begin your trek, to the aisles.");
@@ -285,6 +286,37 @@ namespace Ignorance_is_Blissful
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\n\nYou shove the pizza box into your shirt, and you start to head back down the aisle.");
             Console.WriteLine("However; you are stopped when running into something that feels like a wall.");
+        }
+        public static void EndOfDemo()
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("Once the horrific monster is gone, you notice the lights in the building suddenly dim.");
+            Console.WriteLine("The once lit up aisles flickered, and the buzzing of the breaker came to a halt.");
+            Console.WriteLine("Darkness entrapted you except for the light of your mother's phone.");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("You hear a terrified womens shriek in the distance.");
+            Console.WriteLine("It sounded familiar.");
+            Console.WriteLine("\n'Mom!' You call out in futile desperation.");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("...");
+            Console.Clear();
+            Console.WriteLine("....");
+            Console.Clear();
+            Console.WriteLine(".....");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("You don't hear your mom, but you hear something moving in the dark at the end of the aisle.");
+            Console.WriteLine("You quickly turn off your phone.");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("=====================================================");
+            Console.WriteLine("End of Demo! Thank you for playing! -Trinity Prichard");
+            Console.WriteLine("=====================================================");
+            Console.ReadKey();
+            Console.Clear();
+
         }
     }
 }
