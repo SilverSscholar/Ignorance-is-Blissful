@@ -12,7 +12,9 @@ namespace Ignorance_is_Blissful
         public int toyKnifeDamage = 3;
         public int stickDamage = 2;
         public int bugJuiceHealth = 4;
-        public int TrexHealth = 4;
+        public int trexHealth = 4;
+        public int bugJuiceInInventory = 4;
+        public int trexInInventory = 4;
 
         public static void INVENTORYGUI()
         {
@@ -62,8 +64,10 @@ namespace Ignorance_is_Blissful
         public static void Food()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Trex provides you with +" +Program.inventory.TrexHealth+ " additional health.");
+            Console.WriteLine("Trex provides you with +" +Program.inventory.trexHealth+ " additional health.");
+            Console.WriteLine("You have "+Program.inventory.trexInInventory+"in your inventory,");
             Console.WriteLine("Bug Juice provides you with +" +Program.inventory.bugJuiceHealth+" additional health.");
+            Console.WriteLine("You have "+ Program.inventory.bugJuiceInInventory +"Bug Juice(s) in your inventory.");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.ReadKey();
             Console.Clear();

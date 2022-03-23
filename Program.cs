@@ -30,6 +30,7 @@ namespace Ignorance_is_Blissful
             UsingThePhone();
             DoneWithThePhone();
             FirstEncounter();
+            Encounter1.FirstEncounter();
         }
         //starting scene
         static public void IntroScreen()
@@ -261,11 +262,11 @@ namespace Ignorance_is_Blissful
         public static void FirstEncounter()
         {
             Console.WriteLine("You find yourself walking down the aisle's the list in your hand.");
-            Console.WriteLine("The first thing on your list is Pizza Rolls.");
-            Console.WriteLine("You make your way down to the frozen aisle.");
-            Console.WriteLine("\nWalking down the aisle, you see fridges stocked with multiple goods.");
+            Console.WriteLine("\nThe first thing on your list is Pizza Rolls.");
+            Console.WriteLine("\nYou make your way down to the frozen aisle.");
+            Console.WriteLine("Walking down the aisle, you see fridges stocked with multiple goods.");
             Console.WriteLine("There was nothing particularly off at first glance of the aisles goods.");
-            Console.WriteLine("You approached the frozen pizza's and stared intently at the packages.");
+            Console.WriteLine("\nYou approached the frozen pizza's and stared intently at the packages.");
             Console.ReadKey();
             Console.Clear();
             Console.WriteLine("The first package to catch your eye is a circular pizza.\nWrapped in saran wrap, with a cardbord base.");
@@ -280,9 +281,9 @@ namespace Ignorance_is_Blissful
             
             Console.WriteLine("You recieved:");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("*****Pizza Roll Box?*****");
+            Console.WriteLine("\n*****Pizza Roll Box?*****");
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("You shove the pizza box into your shirt, and you start to head back down the aisle.");
+            Console.WriteLine("\n\nYou shove the pizza box into your shirt, and you start to head back down the aisle.");
             Console.WriteLine("However; you are stopped when running into something that feels like a wall.");
         }
     }

@@ -12,5 +12,7 @@ namespace Ignorance_is_Blissful
         public int health = 10;
         public int damage = 2;
         public int defense = 2;
+        public int armourValue = 6;
+        public int weaponValue = 5;
     }
 }
