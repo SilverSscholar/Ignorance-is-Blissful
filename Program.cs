@@ -300,6 +300,19 @@ namespace Ignorance_is_Blissful
             Console.WriteLine("You recieved:");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n*****Pizza Roll Box?*****");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("   __________________________________          ");
+            Console.WriteLine("  /                                / |         ");
+            Console.WriteLine(" /                                /  |         ");
+            Console.WriteLine("/________________________________/  /|         ");
+            Console.WriteLine("|   KREUGER BRAND                | / |         ");
+            Console.WriteLine("|  Frozen Pizza Rolls        ____|/  |         ");
+            Console.WriteLine("|                           /    |  /          ");
+            Console.WriteLine("|  A treat just for kids!  /     | /           ");
+            Console.WriteLine("|_________________________/______|/            ");
+            
+            Console.ReadKey();
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\n\nYou shove the pizza box into your shirt, and you start to head back down the aisle.");
             Console.WriteLine("However; you are stopped when running into something that feels like a wall.");
