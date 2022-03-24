@@ -40,7 +40,7 @@ namespace Ignorance_is_Blissful
             Console.WriteLine("A C# program written by: Trinity Prichard");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("!!!!!!!!!!!!!!!!!\nTrigger Warnings:\nThis game contains topics of abuse, divorce, gore, and implied cannibalism.\nIf this is not something you wish to see" +
-                "please exit now.\nUsing the [Close] button on the top right corner of your screen.\n(until i figure out how set [ESC] to escape.)");
+                "please exit now.\nUsing the [Close] button on the top right corner of your screen.");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("Through-out the length of this application please use the 'Enter' key to proceed.");
             Console.ReadKey();
