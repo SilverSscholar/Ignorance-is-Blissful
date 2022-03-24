@@ -220,7 +220,7 @@ namespace Ignorance_is_Blissful
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(currentPlayer.name + " recieved one **Mom's Phone/Grocery List**!");
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("|=================|");
             Console.WriteLine("| --------------- |");
             Console.WriteLine("|                 |");

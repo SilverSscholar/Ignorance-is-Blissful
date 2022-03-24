@@ -13,11 +13,20 @@ namespace Ignorance_is_Blissful
             Console.ReadKey();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("=========================================");
-            Console.WriteLine("| [1] Contacts  [2] Messages   [3] Memos |");
-            Console.WriteLine("| [4] Notes     [5] Calculator [6] Items |");
-            Console.WriteLine("| [7] Exit                               |");
-            Console.WriteLine("=========================================");
+            Console.WriteLine("|=================|");
+            Console.WriteLine("| --------------- |");
+            Console.WriteLine("| [1]Contacts     |");
+            Console.WriteLine("| [2]Messages     |");
+            Console.WriteLine("| [3]Memos        |");
+            Console.WriteLine("| [4]Notes        |");
+            Console.WriteLine("| [5]Calculator   |");
+            Console.WriteLine("| [6]Items        |");
+            Console.WriteLine("| [7]Exit         |");
+            Console.WriteLine("|                 |");
+            Console.WriteLine("|-----------------|");
+            Console.WriteLine("|      [   ]      |");
+            Console.WriteLine("|-----------------|");
+            Console.WriteLine("|=================|");
 
             Console.WriteLine("Please input your option.");
 
@@ -298,6 +307,7 @@ namespace Ignorance_is_Blissful
 
             Console.ReadKey();
             Console.Clear();
+            PHONEGUI();
            
         }
         public static void Items()
