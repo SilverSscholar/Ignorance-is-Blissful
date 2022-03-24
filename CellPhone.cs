@@ -102,6 +102,14 @@ namespace Ignorance_is_Blissful
                     try
                     {
                         lines3 = File.ReadAllLines(filePath3);
+                        foreach (string line in lines3)
+                        {
+                            Console.WriteLine(line);
+                        }
+                        Console.ReadKey();
+                        Console.Clear();
+                        
+                        
                     }
                     catch (Exception ex)
                     {
@@ -120,6 +128,7 @@ namespace Ignorance_is_Blissful
                             "\n                         don't even want to see your child on their birthday"+
                             "\n                                                         I'll be there at 7." +
                             "\n                                                                -Sent 4:10AM");
+                     
                     }
                     Console.ReadKey();
                     Console.Clear();
@@ -132,6 +141,13 @@ namespace Ignorance_is_Blissful
                     try
                     {
                         lines5 =File.ReadAllLines(filePath5);
+                        foreach (string line in lines5)
+                        {
+                            Console.WriteLine(line);
+                        }
+                        Console.ReadKey();
+                        Console.Clear();
+                     
                     }
                     catch(Exception ex)
                     {
@@ -160,6 +176,7 @@ namespace Ignorance_is_Blissful
                     }
                     Console.ReadKey();
                     Console.Clear();
+                    Messages();
                    
                     break;
                 case "3":
@@ -168,7 +185,14 @@ namespace Ignorance_is_Blissful
                     string[] lines4;
                     try
                     {
-                        lines4 =File.ReadAllLines(filePath4);
+                        lines4 = File.ReadAllLines(filePath4);
+                        foreach (string line in lines4)
+                        {
+                            Console.WriteLine(line);
+                        }
+                        Console.ReadKey();
+                        Console.Clear();
+                        
                     }
                     catch
                     {
@@ -206,17 +230,10 @@ namespace Ignorance_is_Blissful
                 case "4":
                     PHONEGUI();
                     Console.ReadKey();
-                    Console.Clear();
-                    break;
-                default:
-                    PHONEGUI();
-                    Console.ReadKey();
-                    Console.Clear();
+                    Console.Clear(); 
                     break;
             }
-            Console.ReadKey();
-            Console.Clear();
-            PHONEGUI();
+            
         }
 
         public static void Memos()
@@ -320,7 +337,6 @@ namespace Ignorance_is_Blissful
         {
             Console.WriteLine("You exit the phone's interface.");
             Console.ReadKey();
-            Console.Clear();
             Program.DoneWithThePhone();   
         }
     }

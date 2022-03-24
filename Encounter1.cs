@@ -109,6 +109,8 @@ namespace Ignorance_is_Blissful
                         Program.EndOfDemo();
                         //go to end of Demo.
                     }
+
+
                 else if (input.ToLower() == "h" || input.ToLower() == "heal")
                 {
                     if (Program.inventory.bugJuiceInInventory == 0)

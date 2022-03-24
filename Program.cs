@@ -54,6 +54,11 @@ namespace Ignorance_is_Blissful
             try
             {
                 lines = File.ReadAllLines(filePath);
+                foreach (string line in lines)
+                {
+                    Console.WriteLine(line);
+                }
+
             }
             catch (FileNotFoundException exnotfound)
             {
@@ -98,41 +103,16 @@ namespace Ignorance_is_Blissful
         }
         static public void SceneOne()
         {
-            var FilePath = @"DialogueOneWhatIsYourName.txt";
-            try
-            {
-                using (StreamReader sr = new StreamReader(FilePath))
-                {
-                    string line;
-
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        Console.WriteLine(line);
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                //something went wrong
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("This file could not be read, backup file produced.");
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine("\nYou awaken from your tired stupor. The drull thud of raindrops hitting your window.\n" +
-                    "You've been stuck in this car all the way from Georgia, and you wanted your bed.\n" +
-                    "Adjusting yourself in your carseat, making an annoyed huff at the belt that held you down.");
-                Console.ReadKey();
-                Console.Clear();
-
-            }
-            //string filePath = @"C:Ignorance is Blissful\SceneOneDialogueOneCarTrip.txt";
+          
+            string filePath = @"SceneOneDialogueOneCarTrip.txt";
 
             //string[] lines = File.ReadAllLines(filePath);
-            //List<string> lines = new List<string>();
-            //lines = File.ReadAllLines(filePath).ToList();
-           // foreach (String line in lines)
-           // {
-              //  Console.WriteLine(line);
-           // }
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+           foreach (String line in lines)
+            {
+                Console.WriteLine(line);
+            }
             if (currentPlayer.name == "")
             {
                 Console.WriteLine("Ah, hey sweetie are you finally awake? You were out like a light! Did you get any sleep at all at your father's?");
@@ -174,6 +154,11 @@ namespace Ignorance_is_Blissful
             try
             {
                 lines2 = File.ReadAllLines(filePath2);
+                lines2 = File.ReadAllLines(filePath2);
+                foreach (string line in lines2)
+                {
+                    Console.WriteLine(line);
+                }
             }
           
             catch (Exception FileNotFoundException)
