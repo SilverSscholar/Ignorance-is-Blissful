@@ -300,7 +300,7 @@ namespace Ignorance_is_Blissful
             Console.WriteLine("You recieved:");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n*****Pizza Roll Box?*****");
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("   __________________________________          ");
             Console.WriteLine("  /                                / |         ");
             Console.WriteLine(" /                                /  |         ");
@@ -339,8 +339,26 @@ namespace Ignorance_is_Blissful
             Console.Clear();
             Console.WriteLine("You don't hear your mom, but you hear something moving in the dark at the end of the aisle.");
             Console.WriteLine("You quickly turn off your phone.");
+            Console.WriteLine("\nYou hear footsteps coming closer.");
+            Console.WriteLine("\nand closer...");
             Console.ReadKey();
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("~~~~~~     ~~~~~~~");
+            Console.WriteLine("______    /_______");
+            Console.WriteLine("| [|] |    | [|] |");
+            Console.WriteLine("=======    =======");
+            Console.WriteLine("   ==   _     ==  ");
+            Console.WriteLine("       /          ");
+            Console.WriteLine("       -          ");
+            Console.WriteLine("__________________");
+
+            Console.WriteLine("\nA man stands before you.");
+            Console.WriteLine("He looks at you with disdain.");
+            Console.WriteLine("\n'What the hell are you?'");
+            Console.ReadKey();
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("=====================================================");
             Console.WriteLine("End of Demo! Thank you for playing! -Trinity Prichard");
             Console.WriteLine("=====================================================");
