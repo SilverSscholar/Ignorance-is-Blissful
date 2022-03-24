@@ -105,6 +105,8 @@ namespace Ignorance_is_Blissful
                     {
                         Console.WriteLine("You manage to flee the " + n + " successfully running down the end of the aisle!");
                         Console.ReadKey();
+                        Console.Clear();
+                        Program.EndOfDemo();
                         //go to end of Demo.
                     }
                 else if (input.ToLower() == "h" || input.ToLower() == "heal")
