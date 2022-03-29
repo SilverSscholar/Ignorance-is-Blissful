@@ -252,11 +252,25 @@ namespace Ignorance_is_Blissful
             string filePath6 = @"GroceryList.txt";
             try
             {
-                List<string> lines6 = new List<string>();
-                lines6 = File.ReadAllLines(filePath6).ToList();
-                foreach (string line in lines6)
+                string[] lines6;
+                var list = new List<string>();
+                var fileStream = new FileStream(@"GroceryList.txt", FileMode.Open, FileAccess.Read);
+
+                //adding lines to a LIST
+                using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
-                    Console.WriteLine(lines6);
+                    string line;
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        list.Add(line);
+                    }
+                }
+                lines6 = list.ToArray();
+
+                //reading the LIST
+                foreach (var item in list)
+                {
+                    Console.WriteLine(item);
                 }
             }
             catch (Exception ex)

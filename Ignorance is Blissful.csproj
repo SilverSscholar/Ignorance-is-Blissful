@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="CellPhone.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="DialogueOneWhatIsYourName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
